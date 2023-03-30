@@ -54,6 +54,31 @@ public class Programa2 {
         System.out.println("La suma es = " + suma);
         
         
+        Scanner consola = new Scanner(System.in);
+        
+        System.out.println("Escribe tu nombre con apellidos");
+        
+        String nombreApellidos = consola.nextLine();
+        
+        System.out.println("Escribe dni");
+        
+        String dni = consola.nextLine();
+        
+        System.out.println("nombreApellidos = " + nombreApellidos + " dni = " + dni);
+        
+        
+        
+        System.out.println("Escribe precio matricula");
+        
+        double precioMatricula = Double.parseDouble(consola.nextLine());
+        
+        System.out.println("En clase virtual");
+        
+        boolean claseVirtual = Boolean.parseBoolean(consola.nextLine());
+        
+        System.out.println("El precio de la matricula es de " + precioMatricula  + "€" + "claseVirtual = "+claseVirtual);
+        
+        
      }
     
 }
