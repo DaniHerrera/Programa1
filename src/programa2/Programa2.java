@@ -6,6 +6,8 @@ public class Programa2 {
     
      public static void main(String[] args) {
          
+        float suma = 0;
+         
         //conversion de tipos
 
         //conversión implícita
@@ -34,8 +36,24 @@ public class Programa2 {
 
         // Imprime el mensaje introducido por el usuario
         System.out.println("Tu mensaje es: "+mensaje);
+        
+        
+        
+        //Programa suma de dos números:
+        
+        System.out.println("Escribe un numero");
+        
+        float valorNumero1 = Integer.parseInt(scanner.nextLine());
 
+        System.out.println("Escribe otro numero");
          
+        float valorNumero2 = Integer.parseInt(scanner.nextLine());
+        
+        suma = valorNumero1 + valorNumero2;
+        
+        System.out.println("La suma es = " + suma);
+        
+        
      }
     
 }
