@@ -67,7 +67,6 @@ public class Programa2 {
         System.out.println("nombreApellidos = " + nombreApellidos + " dni = " + dni);
         
         
-        
         System.out.println("Escribe precio matricula");
         
         double precioMatricula = Double.parseDouble(consola.nextLine());
