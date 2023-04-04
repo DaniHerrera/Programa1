@@ -8,19 +8,21 @@ public class EjercicioFecha01 {
     public static void main(String[] args) {
 
         /*
-            Se carga una fecha (día, mes y año) por teclado. 
-            Mostrar un mensaje si corresponde al primer trimestre del año (enero, febrero o marzo). 
-            Cargar por teclado el valor numérico del día, mes y año. 
-            El programa deberá mostrar si el mes pertenece al primer trimestre
+            Segunda versión a mi entender !!!
+        
+            Validaciones de año superior a 1900, si es año bisiesto o no,
+            si el mes está comprendido entre 1 y 12,
+            y si el día está dentro del rango de ese mes en concreto
+        
             Ejemplo: dia:10 mes:1 año:2010
          */
         int dia, mes, anyo;
 
         //Arrays, no los hemos visto, es un extra !!!
         
-        int[] diasMesesAnyoNormal = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int[] diasMesesAnyoNormal = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // Año normal Febrero 28 días
 
-        int[] diasMesesAnyoBisiesto = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int[] diasMesesAnyoBisiesto = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // Año bisiesto Febrero 29 días
 
         Scanner consola = new Scanner(System.in);
 
@@ -33,9 +35,9 @@ public class EjercicioFecha01 {
         System.out.println("Introduce el año:");
         anyo = consola.nextInt();
 
-        //Si es divisible entre 4 y no es divisible entre 100 o es divisible entre 100 y 400.
-        
         if(anyo>=1900){
+            
+            //Si es divisible entre 4 y no es divisible entre 100 o es divisible entre 100 y 400.
         
             if ((anyo % 4 == 0 && anyo % 100 != 0) || (anyo % 100 == 0 && anyo % 400 == 0)) {
 
@@ -100,7 +102,7 @@ public class EjercicioFecha01 {
                     
         }
 
-        System.out.println("dia: " + dia + " mes: " + mes + " año: " + anyo);
+        System.out.println("RESUMEN INTRODUCIDO: dia: " + dia + " mes: " + mes + " año: " + anyo);
 
     }
 
