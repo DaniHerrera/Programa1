@@ -7,103 +7,59 @@ public class EjercicioFecha01 {
 
     public static void main(String[] args) {
 
-        /*
-            Segunda versión a mi entender !!!
-        
-            Validaciones de año superior a 1900, si es año bisiesto o no,
-            si el mes está comprendido entre 1 y 12,
-            y si el día está dentro del rango de ese mes en concreto
-        
-            Ejemplo: dia:10 mes:1 año:2010
-         */
-        int dia, mes, anyo;
-
-        //Arrays, no los hemos visto, es un extra !!!
-        
-        int[] diasMesesAnyoNormal = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // Año normal Febrero 28 días
-
-        int[] diasMesesAnyoBisiesto = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // Año bisiesto Febrero 29 días
-
+        int mes;
+        String mesTexto;
         Scanner consola = new Scanner(System.in);
 
-        System.out.println("Introduce el día:");
-        dia = consola.nextInt();
+        // SOLICITUD DE DATOS POR CONSOLA
+        System.out.println("Ingrese el mes (en número):");
 
-        System.out.println("Introduce el mes:");
         mes = consola.nextInt();
 
-        System.out.println("Introduce el año:");
-        anyo = consola.nextInt();
+        switch (mes) {
 
-        if(anyo>=1900){
-            
-            //Si es divisible entre 4 y no es divisible entre 100 o es divisible entre 100 y 400.
-        
-            if ((anyo % 4 == 0 && anyo % 100 != 0) || (anyo % 100 == 0 && anyo % 400 == 0)) {
+            case 1:
+                mesTexto = "Enero";
+                break;
+            case 2:
+                mesTexto = "Febrero";
+                break;
+            case 3:
+                mesTexto = "Marzo";
+                break;
+            case 4:
+                mesTexto = "Abril";
+                break;
+            case 5:
+                mesTexto = "Mayo";
+                break;
+            case 6:
+                mesTexto = "Junio";
+                break;
+            case 7:
+                mesTexto = "Julio";
+                break;
+            case 8:
+                mesTexto = "Agosto";
+                break;
+            case 9:
+                mesTexto = "Septiembre";
+                break;
+            case 10:
+                mesTexto = "Octubre";
+                break;
+            case 11:
+                mesTexto = "Noviembre";
+                break;
+            case 12:
+                mesTexto = "Diciembre";
+                break;
 
-                System.out.println("El año " + anyo + " es bisiesto");
+            default:
+                mesTexto = "incorrecto";
 
-                if (mes >= 1 && mes <= 12) {
-                    
-                    //Arrays, no lo hemos visto
-                    int totalDiasMes1 = diasMesesAnyoBisiesto[mes - 1];
-
-                    System.out.println("El total de días de este mes será de " + totalDiasMes1 + " días");
-
-                    if (dia >= 1 && totalDiasMes1 >= dia) {
-
-                        System.out.println("El día " + dia + " es correcto");
-
-                    } else {
-
-                        System.out.println("El día " + dia + " es incorrecto");
-
-                    }
-
-                } else {
-
-                    System.out.println("El mes " + mes + " no existe");
-
-                }
-
-
-            } else {
-
-                System.out.println("El año " + anyo + " no es bisiesto");
-
-                if(mes >=1 && mes <=12){
-
-                    //Arrays, no lo hemos visto
-                    int totalDiasMes2 = diasMesesAnyoNormal[mes - 1];
-
-                    System.out.println("El total de días de este mes será de " + totalDiasMes2 + " días");
-
-                    if (dia >= 1 && totalDiasMes2 >= dia) {
-
-                        System.out.println("El día " + dia + " es correcto");
-
-                    } else {
-
-                        System.out.println("El día " + dia + " es incorrecto");
-
-                    }
-
-                }else{
-
-                     System.out.println("El mes " + mes + " no existe");
-
-                }
-                
-            }
-            
-        }else{
-            
-             System.out.println("El año " + anyo + " no existe");
-                    
         }
-
-        System.out.println("RESUMEN INTRODUCIDO: dia: " + dia + " mes: " + mes + " año: " + anyo);
-
+        
+        System.out.println("El mes introducido es " + mesTexto);
     }
-
 }

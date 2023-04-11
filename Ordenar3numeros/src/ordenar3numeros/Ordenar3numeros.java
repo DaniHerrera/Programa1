@@ -33,7 +33,6 @@ public class Ordenar3numeros {
         double pequeño = 0;
         double mediano = 0;
 
-        String error = "";
 
         Scanner consola = new Scanner(System.in);
 
