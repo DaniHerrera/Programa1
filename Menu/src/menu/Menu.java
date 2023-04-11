@@ -24,16 +24,20 @@ public class Menu {
         System.out.println("4) SALIR DEL MENÚ EXIT");
        
         
-        while(operacion != 4){
+        while(operacion != 52){
             
             System.out.println("Ingrese la operación a realizar 1,2,3 o 4");
-            operacion = Integer.parseInt(consola.nextLine());
+            operacion = consola.next().charAt(0);
             
-            if((int)operacion == 1 || (int)operacion == 2 ||(int)operacion == 3 ||(int)operacion == 4 ){
+            //Test
+            //System.out.println("test operacion = " + operacion);
+            
+            if(operacion == 49 || operacion == 50 ||operacion == 51 ||operacion == 52 ){
                
                 switch (operacion) {
 
-                    case 1:
+                    //representa a la opción 1 en CÓDIGO ASCII, importante !!! HABLAMOS DE CHARS
+                    case 49:
                         System.out.println("Ingrese la base");
                         numero1 = consola.nextFloat();
 
@@ -42,9 +46,13 @@ public class Menu {
 
                         area = numero1 * numero2;
                         resultado = "El area será de: "+ area;
+                        
+                        System.out.println("El area será de: "+resultado);
 
                         break;
-                    case 2:
+                        
+                    //representa a la opción 2 en CÓDIGO ASCII, importante !!! HABLAMOS DE CHARS
+                    case 50:
                         System.out.println("Ingrese la base");
                         numero1 = consola.nextFloat();
 
@@ -53,35 +61,39 @@ public class Menu {
 
                         area = ((numero1 * numero2)/2);
                         resultado = "El area será de: "+ area;
+                        
+                        System.out.println("El area será de: "+resultado);
 
                         break;
-                    case 3:
+                        
+                    //representa a la opción 3 en CÓDIGO ASCII, importante !!! HABLAMOS DE CHARS
+                    case 51:
                         System.out.println("Ingrese el radio");
 
                         numero1 = consola.nextFloat();
 
                         area = (float) 3.1415 * numero1 * numero1;
                         resultado = "El area será de: "+ area;
+                        
+                        System.out.println("El area será de: "+resultado);
 
+                        break;
+                    
+                    //representa a la opción 4 en CÓDIGO ASCII, importante !!! HABLAMOS DE CHARS
+                    case 52:
+                        System.out.println("Hemos salido del programa");
                         break;
 
                     default:
-                        System.out.println("Por favor, introduce la opción correspondiente 1, 2 o 3 o 4 para salir");
-                        resultado = "No podemos calcular el area";
+                        System.out.println("No hemos introducido la opción correspondiente");
+                       
                         break;
                 }
 
-                System.out.println("El area será de: "+resultado);
-            
-            }else{
-                
-                System.out.println("Por favor, introduce la opción correspondiente 1, 2 o 3 o 4 para salir");
-                
             }
 
         }
-        
-        System.out.println("Hemos salido del programa");
+      
         
     }
     
