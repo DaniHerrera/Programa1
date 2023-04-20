@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class For1 {
 
     public static void main(String[] args) {
-        
+
         Scanner consola = new Scanner(System.in);
 
         /*
@@ -14,8 +14,7 @@ public class For1 {
         imprime números desde 0 hasta el número dado por el usuario. Puede suponer que 
         el usuario siempre da un número positivo. 
          */
-        
-        /*
+ /*
         System.out.println("Introduce un numero entero");
         int a = consola.nextInt();
         
@@ -42,11 +41,11 @@ public class For1 {
         
          */
 
-        /*
+ /*
         Implemente un programa que calcule la suma 1+2+3+...+n 
         donde n se proporciona como entrada por consola.
          */
-        /*
+ /*
         System.out.println("Introduce un numero entero");
         double suma;
         int c = consola.nextInt();
@@ -58,12 +57,11 @@ public class For1 {
 
         suma = aux;
         System.out.println("suma = " + suma);
-        */
-        
-        /*
+         */
+ /*
         imprima los numeros pares entre dos numeros que se le pidan al usuario
-        */
-        /*
+         */
+ /*
         System.out.println("Introduce un numero entero como inicial ");
         int primero = consola.nextInt();
         
@@ -76,10 +74,9 @@ public class For1 {
                System.out.println("Numero par: " + i);
            }
         }
-        */
+         */
         //ingresar por consola 3 calificaciones..uso de un for para pedir las tres y obtener el promedio de ellas
         // se iran acumulando las calificaciones
-        
         /*
         double calif = 0;
         double suma = 0;
@@ -96,10 +93,9 @@ public class For1 {
         resultado = suma /3;
         
         System.out.println("resultado = " + resultado);
-        */
-        
+         */
         //DECLARACIÓN DE VARIABLES
-     /*
+        /*
         int i = 0;
         int inicio;
         int fin;
@@ -117,11 +113,10 @@ public class For1 {
                 System.out.println(i);
             }
         }
-        */
-        /* Tabla de multiplicar de un numero 
+         */
+ /* Tabla de multiplicar de un numero 
         entrado por teclado */
-        
-        /*
+ /*
         int numero;
         
         System.out.println("Ingresa un numero entero y mostraremos su tabla de multiplicar:");
@@ -131,15 +126,13 @@ public class For1 {
         for (int i = 0; i<=10; i++) {
             System.out.println(numero + " x "+ i + " = " + (i*numero));
         }
-        */
-        
-        /*
+         */
+ /*
         Escribir un programa que lea 12 notas de alumnos y nos informe cuántos
         estudiantes han aprobado y cuántos han suspendido, sabiendo 
         que la nota para aprobar es 6.
-        */
-        
-        /*
+         */
+ /*
         int numero;
         String calificacion;
         
@@ -167,10 +160,8 @@ public class For1 {
              
         }
         
-        */
-         
-       
-        /*
+         */
+ /*
 
            1 Calcular el area y el perimetro de un cuadrado
 
@@ -178,9 +169,8 @@ public class For1 {
             base y altura
             perimetro = teorema de pitagoras
 
-        */
-        
-         /*
+         */
+ /*
             Buscar numeros primos entre 0 y 100
            
         
@@ -192,45 +182,119 @@ public class For1 {
             por cualquier número que no sea 1 o él mismo, se obtiene un 
             resto distinto de cero.
         
-        */
-        
-       
+         */
+ /*
         boolean primo;
-        
-        for (int numero = 1; numero<=100; numero++) {
-         
+
+        for (int numero = 1; numero <= 100; numero++) {
+
             primo = true;
-            
+
             //treiem el 1 i ell mateix perqué sempre serà divisible .
-            for (int divisor = 2; divisor<= numero-1; divisor++) {
+            for (int divisor = 2; divisor <= numero - 1; divisor++) {
+
+                //** 5 / 1 resto 0     -->    se iguala a 0
+                //5 / 2 = 2 resto 1  -> 5 % 2 = 1     -->    se iguala a 0
+                //5 / 3 = 1 resto 2  -> 5 % 3 = 2     -->    se iguala a 0
+                //5 / 4 = 1 resto 1  -> 5 % 4 = 1     -->    se iguala a 0
+                //5 / 5 resto 0        -->    se iguala a 0
                 
-                //** 5 / 1 resto 0
-                //5 / 2 = 2 resto 1  -> 5 % 2 = 1
-                //5 / 3 = 1 resto 2  -> 5 % 3 = 2
-                //5 / 4 = 1 resto 1  -> 5 % 4 = 1
-                //5 / 5 resto 0
                 
                 //Sabem que el coeficient del resto mai te decimals
-                if((numero % divisor) == 0) {
+                if ((numero % divisor) == 0) {
                     primo = false;
+                    break;
                 }
-             
+
             }
-            if(primo){
-                
+            if (primo) {
+
                 System.out.println(numero + " será un numero primo");
-                
-            }else{
-                
+
+            } else {
+
                 System.out.println(numero + " NO será un numero primo");
-                
+
             }
-            
-         
+
         }
+         */
+ /*for (int i = 1; i<=5; i++) {
+           
+               System.out.println(i);
+           
+           
+           }*/
+ /*
+        int num = 0;
+        for (int i = 1; i <= 100; i++) {
+            int contador = 0;
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    contador++;
+                }
+            }
+            if (contador == 2) {
+                System.out.print(i + " ");
+            }
+        }
+ 
+ */
+ 
+ /*
+        //INTRODUCION DE DATOS
+        //DECLARACION DE VARIABLES
+        //int num;
+        int contador_primos = 0;
+        int i, j;
+        Scanner sc = new Scanner(System.in);
+
+        //INTRODUCION DE DATOS
+        //System.out.println("Introduce un número: ");
+        //num = sc.nextInt();
+        // PROCESANDO…..
+        for (j = 1; j <= 100; j++) {
+
+            contador_primos = 0;
+            
+            for (i = 1; i <= j; i++) {
+                
+                if (j % i == 0) {
+                    
+                    contador_primos++;
+                    
+                } //fin de la condicion si el resto es 0
+                
+            } //fin del contador de divisores
+            
+            if (contador_primos == 2) {
+                System.out.println("El número " + j + " es primo.");
+            } else {
+                System.out.println("El número " + j + " no es primo.");
+            }
+
+        }//fin del contador de los 100 numeros
+
+        //VISUALIZACION DE RESULTADOS
+        //FINALIZACION DEL PROGRAMA
+        sc.close();
+        */
+
+        //Menu por pantalla perimetro triangulo isosceles, cuadrado, cubo
+        /*
+        
+        1.- Calcular el perimetro de un triangulo isosceloes
+        2.- Calcular el perimertro de un cuadrado  lado x 4
+        3.- Calcular el perimetro de un cubo
+        4.- Calcular el perimetro de un prisma
+        
+        */
         
         
-       
+ 
+ 
     }
 
 }
+
+
