@@ -104,11 +104,11 @@ public class Factorial {
         */
         
         
-        
+        /*
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         
-        long startTime = System.nanoTime();
+        //long startTime = System.nanoTime();
 
         for (int i = 0; i < n; i++) {
             System.out.print("* ");
@@ -125,10 +125,72 @@ public class Factorial {
             System.out.print("* ");
         }
         
-        long endTime = System.nanoTime();
-        long timeElapsed = endTime - startTime;
+        //long endTime = System.nanoTime();
+        //long timeElapsed = endTime - startTime;
         
         System.out.println("Tiempo de ejecución en milisegundos: " + timeElapsed / 1000000);
+        */
+        
+        /**********************************/
+/*
+        // DECLARACIÓN DE VARIABLES
+        Scanner consola = new Scanner(System.in);
+        int n;
+
+        // SOLICITUD DE DATOS POR CONSOLA
+        System.out.println("Introduce un número:");
+        n = consola.nextInt();
+
+        // PROCESANDO...
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if(i==2 && j==2){
+                    System.out.print("X ");
+                }else{
+                    System.out.print("I ");
+                }
+            }
+            System.out.println("");
+        }
+
+        //FIN DEL PROCESO
+        
+        */
+
+
+              /**********************************/
+
+        // DECLARACIÓN DE VARIABLES
+        Scanner consola = new Scanner(System.in);
+        int n;
+        char caracter;
+        
+        // SOLICITUD DE DATOS POR CONSOLA
+        System.out.println("Introduce la altura de la pirámide:");
+        n = consola.nextInt();
+        System.out.println("Introduce el caracter a printar:");
+        caracter = consola.next().charAt(0);
+
+        // PROCESANDO...
+        /*for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                 System.out.print(caracter);     
+            }
+            System.out.println("");
+        }*/
+        
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j >= 1; j--) {
+                 System.out.print(caracter);     
+            }
+            System.out.println("");
+        }
+    
+        
+
+        //FIN DEL PROCESO
+        
+        
         
     }
     
